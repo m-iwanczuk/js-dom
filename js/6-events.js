@@ -22,5 +22,9 @@ heading.onclick = function()    {
 heading.addEventListener('click', changeColor);
 heading.addEventListener('click', setText);
 
+document.querySelector('p').addEventListener('click', function(){
+    this.style.backgroundColor = 'green';
+    heading.removeEventListener('click', setText);
+});
 
 console.dir(heading);
