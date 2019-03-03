@@ -28,3 +28,17 @@ document.querySelector('p').addEventListener('click', function(){
 });
 
 console.dir(heading);
+
+
+/* Obsługa zdarzeń */
+
+document.querySelector('a').addEventListener('click', function(event) {
+    event.preventDefault();
+    event.stopPropagation();
+    console.log(event);
+    this.style.backgroundColor = 'pink';
+});
+
+document.body.addEventListener('click', function(){
+    this.style.backgroundColor = 'orange';
+});
